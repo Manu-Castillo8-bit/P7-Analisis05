@@ -66,19 +66,26 @@ cultivo la rosa blanca."
     <FlyoutPage.Detail>
         <NavigationPage>
             <x:Arguments>
-                <ContentPage Title="Detail"
-                  >
+                <ContentPage Title="">
 
                     <Grid>
                         <VerticalStackLayout Spacing="20" 
                                              Padding="20" 
                                              VerticalOptions="Center">
-                            
+
+
+                             <Label Text="Flyout" 
+                                   FontSize="24" 
+                                   FontAttributes="Bold" 
+                                   TextColor="White" 
+                                   HorizontalOptions="Center"/>
+
+
                             <Label Text="José Martí" 
                                    FontSize="28" 
                                    FontAttributes="Bold" 
                                    HorizontalOptions="Center"
-                                   TextColor="#2C3E50"/>
+                                   TextColor="#ffffff"/>
                             
                          
                             

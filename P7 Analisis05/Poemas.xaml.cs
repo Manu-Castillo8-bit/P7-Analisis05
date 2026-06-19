@@ -4,7 +4,7 @@ using Microsoft.Maui.Controls;
 namespace P7_Analisis05
 {
     // Clase para los poemas
-    public class Poema
+    public class Poema_class
     {
         public string Titulo { get; set; } = string.Empty;
         public string Autor { get; set; } = string.Empty;
@@ -14,7 +14,7 @@ namespace P7_Analisis05
 
     public partial class Poema : FlyoutPage
     {
-        private ObservableCollection<Poema> _poemas;
+        private ObservableCollection<Poema_class> _poemas;
         private ContentPage _detailPage;
 
         public Poema()
@@ -22,9 +22,9 @@ namespace P7_Analisis05
             InitializeComponent();
             
             // Inicializar la colección de poemas
-            _poemas = new ObservableCollection<Poema>
+            _poemas = new ObservableCollection<Poema_class>
             {
-                new Poema
+                new Poema_class
                 {
                     Titulo = "Cultivo una rosa blanca",
                     Autor = "José Martí",
@@ -131,7 +131,7 @@ namespace P7_Analisis05
 
         private void OnPoemaSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItem is Poema poemaSeleccionado)
+            if (e.SelectedItem is Poema_class poemaSeleccionado)
             {
                 // Actualizar la página de detalle
                 _detailPage.Title = $"📖 {poemaSeleccionado.Titulo}";

@@ -81,13 +81,17 @@ cultivo la rosa blanca."
                                    HorizontalOptions="Center"/>
 
 
-                            <Label Text="🌹 Cultivo una rosa blanca, AUTOR: José Martí" 
+                            <Label Text="🌹 Cultivo una rosa blanca" 
                                    FontSize="28" 
                                    FontAttributes="Bold" 
                                    HorizontalOptions="Center"
                                    TextColor="#ffffff"/>
                             
-                         
+             <Label Text=" AUTOR: José Martí" 
+                                   FontSize="28" 
+                                   FontAttributes="Bold" 
+                                   HorizontalOptions="Center"
+                                   TextColor="#ffffff"/>                       
                             
                             <Frame BackgroundColor="#F8F9FA" 
                                    CornerRadius="15" 

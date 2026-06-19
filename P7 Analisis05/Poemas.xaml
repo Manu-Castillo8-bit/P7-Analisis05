@@ -3,28 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="P7_Analisis05.Poemas">
     
+
+    <!--FLYOUT-->
     <FlyoutPage.Flyout>
         <ContentPage Title="📚 Poema">
             <ScrollView>
                 <VerticalStackLayout Spacing="10" Padding="10">
                     
                     <!-- Encabezado -->
-                    <Frame BackgroundColor="#2C3E50" 
-                           CornerRadius="10" 
-                           Padding="15" 
-                           Margin="0,0,0,20">
                         <VerticalStackLayout>
-                            <Label Text="📖 Poesía Clásica" 
+                            <Label Text="Flyout" 
                                    FontSize="24" 
                                    FontAttributes="Bold" 
                                    TextColor="White" 
                                    HorizontalOptions="Center"/>
-                            <Label Text="Un poema para ti" 
-                                   FontSize="14" 
-                                   TextColor="#BDC3C7" 
-                                   HorizontalOptions="Center"/>
+                            
                         </VerticalStackLayout>
                     </Frame>
+
 
                     <!-- Poema en el Flyout -->
                     <Frame BackgroundColor="#F8F9FA" 
@@ -38,10 +34,7 @@
                                    TextColor="#2C3E50"
                                    HorizontalOptions="Center"/>
                             
-                            <Label Text="José Martí" 
-                                   FontSize="14" 
-                                   TextColor="#7F8C8D"
-                                   HorizontalOptions="Center"/>
+                           
                             
                             <BoxView HeightRequest="1" 
                                      Color="#BDC3C7"/>
@@ -60,23 +53,20 @@ cultivo la rosa blanca."
                                    LineBreakMode="WordWrap"/>
                         </VerticalStackLayout>
                     </Frame>
-                    
-                    <!-- Pie de página -->
-                    <Label Text="© 2024 - Poesía Clásica" 
-                           FontSize="12" 
-                           TextColor="#95A5A6" 
-                           HorizontalOptions="Center"
-                           Margin="0,20,0,0"/>
-                    
+            
                 </VerticalStackLayout>
             </ScrollView>
         </ContentPage>
     </FlyoutPage.Flyout>
     
+
+
+
+<!--DETAIL-->
     <FlyoutPage.Detail>
         <NavigationPage>
             <x:Arguments>
-                <ContentPage Title="📖 Poema">
+                <ContentPage Title="Detail">
                     <Grid>
                         <VerticalStackLayout Spacing="20" 
                                              Padding="20" 
@@ -88,15 +78,7 @@ cultivo la rosa blanca."
                                    HorizontalOptions="Center"
                                    TextColor="#2C3E50"/>
                             
-                            <Label Text="✍️ José Martí" 
-                                   FontSize="18" 
-                                   HorizontalOptions="Center"
-                                   TextColor="#7F8C8D"/>
-                            
-                            <BoxView HeightRequest="2" 
-                                     Color="#3498DB" 
-                                     HorizontalOptions="Center"
-                                     WidthRequest="100"/>
+                         
                             
                             <Frame BackgroundColor="#F8F9FA" 
                                    CornerRadius="15" 
@@ -116,10 +98,7 @@ cultivo la rosa blanca."
                                        LineBreakMode="WordWrap"/>
                             </Frame>
                             
-                            <Label Text="☰ Toca el icono de menú para ver el poema" 
-                                   FontSize="14" 
-                                   TextColor="#95A5A6" 
-                                   HorizontalOptions="Center"/>
+                            
                         </VerticalStackLayout>
                     </Grid>
                 </ContentPage>

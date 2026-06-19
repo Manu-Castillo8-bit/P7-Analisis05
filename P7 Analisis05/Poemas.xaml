@@ -67,7 +67,7 @@ cultivo la rosa blanca."
         <NavigationPage>
             <x:Arguments>
                 <ContentPage Title="Detail"
-                  HorizontalOptions="Center">
+                  >
 
                     <Grid>
                         <VerticalStackLayout Spacing="20" 

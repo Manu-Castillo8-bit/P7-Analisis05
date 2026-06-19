@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P7_Analisis05.Poemas">
+    
+    <FlyoutPage.Flyout>
+        <ContentPage Title="📚 Poemas">
+            <ScrollView>
+                <VerticalStackLayout Spacing="10" Padding="10">
+                    
+                    <!-- Encabezado -->
+                    <Frame BackgroundColor="#2C3E50" 
+                           CornerRadius="10" 
+                           Padding="15" 
+                           Margin="0,0,0,20">
+                        <VerticalStackLayout>
+                            <Label Text="📖 Poesía Clásica" 
+                                   FontSize="24" 
+                                   FontAttributes="Bold" 
+                                   TextColor="White" 
+                                   HorizontalOptions="Center"/>
+                            <Label Text="Colección de poemas" 
+                                   FontSize="14" 
+                                   TextColor="#BDC3C7" 
+                                   HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Lista de Poemas -->
+                    <ListView x:Name="PoemasListView" 
+                              SeparatorVisibility="Default"
+                              SeparatorColor="#E0E0E0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="10" 
+                                          ColumnDefinitions="Auto,*,Auto"
+                                          BackgroundColor="Transparent">
+                                        
+                                        <Label Grid.Column="0" 
+                                               Text="{Binding Icono}" 
+                                               FontSize="24" 
+                                               VerticalOptions="Center"
+                                               Margin="0,0,10,0"/>
+                                        
+                                        <VerticalStackLayout Grid.Column="1">
+                                            <Label Text="{Binding Titulo}" 
+                                                   FontSize="16" 
+                                                   FontAttributes="Bold"
+                                                   TextColor="#2C3E50"/>
+                                            <Label Text="{Binding Autor}" 
+                                                   FontSize="12" 
+                                                   TextColor="#7F8C8D"/>
+                                        </VerticalStackLayout>
+                                        
+                                        <Label Grid.Column="2" 
+                                               Text="›" 
+                                               FontSize="20" 
+                                               TextColor="#BDC3C7"
+                                               VerticalOptions="Center"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    
+                    <!-- Pie de página -->
+                    <Label Text="© 2024 - Poesía Clásica" 
+                           FontSize="12" 
+                           TextColor="#95A5A6" 
+                           HorizontalOptions="Center"
+                           Margin="0,20,0,0"/>
+                    
+                </VerticalStackLayout>
+            </ScrollView>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <ContentPage x:Name="DetailPage" 
+                             Title="📖 Poemas">
+                    <Grid>
+                        <VerticalStackLayout Spacing="20" 
+                                             Padding="20" 
+                                             VerticalOptions="Center">
+                            
+                            <Label x:Name="TituloPoema" 
+                                   Text="Selecciona un poema" 
+                                   FontSize="28" 
+                                   FontAttributes="Bold" 
+                                   HorizontalOptions="Center"
+                                   TextColor="#2C3E50"/>
+                            
+                            <Label x:Name="AutorPoema" 
+                                   Text="en el menú lateral" 
+                                   FontSize="18" 
+                                   HorizontalOptions="Center"
+                                   TextColor="#7F8C8D"/>
+                            
+                            <BoxView HeightRequest="2" 
+                                     Color="#3498DB" 
+                                     HorizontalOptions="Center"
+                                     WidthRequest="100"/>
+                            
+                            <Frame BackgroundColor="#F8F9FA" 
+                                   CornerRadius="15" 
+                                   Padding="20"
+                                   Margin="0,20">
+                                <Label x:Name="ContenidoPoema" 
+                                       Text="Selecciona un poema del menú para leerlo aquí" 
+                                       FontSize="16" 
+                                       TextColor="#2C3E50"
+                                       LineBreakMode="WordWrap"/>
+                            </Frame>
+                            
+                            <Label Text="☰ Toca el icono de menú para ver los poemas" 
+                                   FontSize="14" 
+                                   TextColor="#95A5A6" 
+                                   HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>

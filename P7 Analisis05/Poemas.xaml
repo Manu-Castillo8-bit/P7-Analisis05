@@ -4,7 +4,7 @@
              x:Class="P7_Analisis05.Poemas">
     
     <FlyoutPage.Flyout>
-        <ContentPage Title="📚 Poemas">
+        <ContentPage Title="📚 Poema">
             <ScrollView>
                 <VerticalStackLayout Spacing="10" Padding="10">
                     
@@ -19,50 +19,47 @@
                                    FontAttributes="Bold" 
                                    TextColor="White" 
                                    HorizontalOptions="Center"/>
-                            <Label Text="Colección de poemas" 
+                            <Label Text="Un poema para ti" 
                                    FontSize="14" 
                                    TextColor="#BDC3C7" 
                                    HorizontalOptions="Center"/>
                         </VerticalStackLayout>
                     </Frame>
 
-                    <!-- Lista de Poemas -->
-                    <ListView x:Name="PoemasListView" 
-                              SeparatorVisibility="Default"
-                              SeparatorColor="#E0E0E0">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <Grid Padding="10" 
-                                          ColumnDefinitions="Auto,*,Auto"
-                                          BackgroundColor="Transparent">
-                                        
-                                        <Label Grid.Column="0" 
-                                               Text="{Binding Icono}" 
-                                               FontSize="24" 
-                                               VerticalOptions="Center"
-                                               Margin="0,0,10,0"/>
-                                        
-                                        <VerticalStackLayout Grid.Column="1">
-                                            <Label Text="{Binding Titulo}" 
-                                                   FontSize="16" 
-                                                   FontAttributes="Bold"
-                                                   TextColor="#2C3E50"/>
-                                            <Label Text="{Binding Autor}" 
-                                                   FontSize="12" 
-                                                   TextColor="#7F8C8D"/>
-                                        </VerticalStackLayout>
-                                        
-                                        <Label Grid.Column="2" 
-                                               Text="›" 
-                                               FontSize="20" 
-                                               TextColor="#BDC3C7"
-                                               VerticalOptions="Center"/>
-                                    </Grid>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                    <!-- Poema en el Flyout -->
+                    <Frame BackgroundColor="#F8F9FA" 
+                           CornerRadius="15" 
+                           Padding="20"
+                           Margin="0,10">
+                        <VerticalStackLayout Spacing="15">
+                            <Label Text="🌹 Cultivo una rosa blanca" 
+                                   FontSize="18" 
+                                   FontAttributes="Bold" 
+                                   TextColor="#2C3E50"
+                                   HorizontalOptions="Center"/>
+                            
+                            <Label Text="José Martí" 
+                                   FontSize="14" 
+                                   TextColor="#7F8C8D"
+                                   HorizontalOptions="Center"/>
+                            
+                            <BoxView HeightRequest="1" 
+                                     Color="#BDC3C7"/>
+                            
+                            <Label Text="Cultivo una rosa blanca
+en junio como en enero,
+para el amigo sincero
+que me da su mano franca.
+
+Y para el cruel que me arranca
+el corazón con que vivo,
+cardo ni ortiga cultivo,
+cultivo la rosa blanca." 
+                                   FontSize="14" 
+                                   TextColor="#2C3E50"
+                                   LineBreakMode="WordWrap"/>
+                        </VerticalStackLayout>
+                    </Frame>
                     
                     <!-- Pie de página -->
                     <Label Text="© 2024 - Poesía Clásica" 
@@ -79,22 +76,19 @@
     <FlyoutPage.Detail>
         <NavigationPage>
             <x:Arguments>
-                <ContentPage x:Name="DetailPage" 
-                             Title="📖 Poemas">
+                <ContentPage Title="📖 Poema">
                     <Grid>
                         <VerticalStackLayout Spacing="20" 
                                              Padding="20" 
                                              VerticalOptions="Center">
                             
-                            <Label x:Name="TituloPoema" 
-                                   Text="Selecciona un poema" 
+                            <Label Text="🌹 Cultivo una rosa blanca" 
                                    FontSize="28" 
                                    FontAttributes="Bold" 
                                    HorizontalOptions="Center"
                                    TextColor="#2C3E50"/>
                             
-                            <Label x:Name="AutorPoema" 
-                                   Text="en el menú lateral" 
+                            <Label Text="✍️ José Martí" 
                                    FontSize="18" 
                                    HorizontalOptions="Center"
                                    TextColor="#7F8C8D"/>
@@ -108,14 +102,21 @@
                                    CornerRadius="15" 
                                    Padding="20"
                                    Margin="0,20">
-                                <Label x:Name="ContenidoPoema" 
-                                       Text="Selecciona un poema del menú para leerlo aquí" 
+                                <Label Text="Cultivo una rosa blanca
+en junio como en enero,
+para el amigo sincero
+que me da su mano franca.
+
+Y para el cruel que me arranca
+el corazón con que vivo,
+cardo ni ortiga cultivo,
+cultivo la rosa blanca." 
                                        FontSize="16" 
                                        TextColor="#2C3E50"
                                        LineBreakMode="WordWrap"/>
                             </Frame>
                             
-                            <Label Text="☰ Toca el icono de menú para ver los poemas" 
+                            <Label Text="☰ Toca el icono de menú para ver el poema" 
                                    FontSize="14" 
                                    TextColor="#95A5A6" 
                                    HorizontalOptions="Center"/>

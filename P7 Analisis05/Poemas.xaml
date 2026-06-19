@@ -71,10 +71,10 @@ cultivo la rosa blanca."
                     <Grid>
                         <VerticalStackLayout Spacing="20" 
                                              Padding="20" 
-                                             VerticalOptions="Center">
+                                             VerticalOptions="Start">
 
 
-                             <Label Text="Flyout" 
+                             <Label Text="Detail" 
                                    FontSize="24" 
                                    FontAttributes="Bold" 
                                    TextColor="White" 

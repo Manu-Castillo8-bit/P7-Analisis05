@@ -8,7 +8,7 @@
     <FlyoutPage.Flyout>
         <ContentPage Title="📚 Poema">
             <ScrollView>
-                <VerticalStackLayout Spacing="10" Padding="10">
+                <VerticalStackLayout Spacing="10" Padding="10" HorizontalOptions="Center">
                     
                     <!-- Encabezado -->
                         <VerticalStackLayout>
@@ -66,13 +66,15 @@ cultivo la rosa blanca."
     <FlyoutPage.Detail>
         <NavigationPage>
             <x:Arguments>
-                <ContentPage Title="Detail">
+                <ContentPage Title="Detail"
+                  HorizontalOptions="Center">
+
                     <Grid>
                         <VerticalStackLayout Spacing="20" 
                                              Padding="20" 
                                              VerticalOptions="Center">
                             
-                            <Label Text="🌹 Cultivo una rosa blanca" 
+                            <Label Text="José Martí" 
                                    FontSize="28" 
                                    FontAttributes="Bold" 
                                    HorizontalOptions="Center"
@@ -84,15 +86,7 @@ cultivo la rosa blanca."
                                    CornerRadius="15" 
                                    Padding="20"
                                    Margin="0,20">
-                                <Label Text="Cultivo una rosa blanca
-en junio como en enero,
-para el amigo sincero
-que me da su mano franca.
-
-Y para el cruel que me arranca
-el corazón con que vivo,
-cardo ni ortiga cultivo,
-cultivo la rosa blanca." 
+                                <Label Text="José Martí (La Habana, 1853 - Dos Ríos, 1895) fue un pensador, escritor, periodista y líder independentista cubano. Conocido como el Apóstol de la Independencia, fundó el Partido Revolucionario Cubano y organizó la Guerra Necesaria de 1895. Es también considerado el precursor del Modernismo literario en Hispanoamérica" 
                                        FontSize="16" 
                                        TextColor="#2C3E50"
                                        LineBreakMode="WordWrap"/>

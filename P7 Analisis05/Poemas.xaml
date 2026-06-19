@@ -19,7 +19,7 @@
                                    HorizontalOptions="Center"/>
                             
                         </VerticalStackLayout>
-                    </Frame>
+                 
 
 
                     <!-- Poema en el Flyout -->
